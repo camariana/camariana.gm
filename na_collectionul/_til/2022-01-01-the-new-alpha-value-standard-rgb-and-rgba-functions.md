@@ -1,3 +1,8 @@
+---
+layout: til
+title: The new alpha value standard rgb() and rgba() functions
+---
+
 # The new alpha value standard rgb() and rgba() functions
 
 
@@ -17,5 +22,3 @@ background-color: rgb(0 0 100% / 80%);
 ```
 
 Note: At the time of writing, in scss (sass), not css, the rgb() will throw a compilation error `Function rgb is missing argument ...`
-
-1st Jan, 2021 - 1:11AM
