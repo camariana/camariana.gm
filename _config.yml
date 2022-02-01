@@ -1,0 +1,27 @@
+# Site settings
+title: 
+description: ""
+keywords:
+baseurl: "" # the subpath of your site, e.g. /blog
+url: 
+type: website
+image: 
+author: A Camariana
+permalink: pretty
+
+# Global Configuration
+source: src
+
+# Sass Settings
+sass:
+  add_charset: true
+  sass_dir: _sass
+  style: :compressed
+
+# Collections Settings
+collections_dir: na_collectionul
+collections:
+  elements:
+    output: false
+
+# Contact & Social Details

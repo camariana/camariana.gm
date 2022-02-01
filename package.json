@@ -1,0 +1,26 @@
+{
+  "name": "camariana.gm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "bundle exec jekyll serve --trace --livereload",
+    "lint:style": "npx stylelint \"**/*.scss\"",
+    "fix:style": "npx stylelint --fix \"**/*.scss\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camariana/camariana.gm.git"
+  },
+  "author": "A Camariana <camariana40@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camariana/camariana.gm/issues"
+  },
+  "homepage": "https://github.com/camariana/camariana.gm#readme",
+  "devDependencies": {
+    "stylelint": "^14.3.0",
+    "stylelint-config-idiomatic-order": "^8.1.0",
+    "stylelint-config-standard-scss": "^3.0.0"
+  }
+}
