@@ -1,0 +1,181 @@
+.cp-masthead {
+  @include pos-rel-object-on-top;
+  @include dp-flex-direction-column;
+}
+
+// Elements
+// contain is use to contain the text along side the side container
+// somecase this is not necessary in your html
+.cp-masthead__contain {
+  display: flex;
+  max-width: var(--contain-target-width);
+  flex-direction: column;
+  flex-grow: 1;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.cp-masthead__text {
+  @include dp-flex-direction-column;
+  @include pos-rel-object-on-top;
+
+  max-width: 60ch;
+  min-height: 400px;
+  justify-content: center;
+  padding: var(--size-48) var(--size-16);
+}
+
+.cp-masthead__title {
+  margin-top: 0;
+  font-size: var(--fs-heading-2);
+  font-weight: 200;
+  line-height: var(--lh-heading-2);
+}
+
+.cp-masthead__sub-title {
+  margin-top: var(--size-4);
+  font-size: var(--fs-subtitle);
+  font-weight: 200;
+}
+
+.cp-masthead__description {
+  margin-block-start: var(--size-8);
+}
+
+.cp-masthead__tag {
+  order: -1;
+  margin-top: 0;
+  margin-bottom: var(--size-4);
+  font-size: var(--fs-caption);
+  text-transform: uppercase;
+}
+
+.cp-masthead__button {
+  align-self: start;
+  margin-top: var(--size-16);
+}
+
+.cp-masthead__meta {
+  margin-top: var(--size-48);
+
+  &::before {
+    display: block;
+    width: 96px;
+    padding-bottom: var(--size-16);
+    border-top: 1px solid var(--border-color-subdued);
+    content: "";
+  }
+}
+
+.cp-masthead__pattern {
+  position: absolute;
+  bottom: 0;
+  fill: var(--canvas-subdued);
+}
+
+.cp-masthead__figure {
+  @include pos-abs-zero-all-sides;
+
+  background-color: var(--canvas-subdued);
+
+  &::after {
+    @include pos-abs-zero-all-sides-pseudo-class;
+
+    background-color: var(--tp-black-light);
+  }
+}
+
+.cp-masthead__picture {
+  @include fit-media-into-container;
+}
+
+.cp-masthead__video {
+  @include fit-media-into-container;
+}
+
+.cp-masthead__img {
+  @include fit-media-into-container;
+}
+
+.cp-masthead__list {
+  @include reset-list;
+
+  display: grid;
+  gap: var(--size-24);
+
+  li {
+    padding: var(--size-16);
+
+    &:nth-child(2) {
+      border: 1px solid var(--primary-enabled);
+    }
+  }
+}
+
+.cp-masthead__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: var(--size-24);
+  fill: var(--icon-color);
+}
+
+// Modifiers
+.cp-masthead--light-gray {
+  background-color: var(--canvas-subdued);
+}
+
+.cp-masthead--fullscreen {
+  min-height: 100vh;
+}
+
+.cp-masthead--two-third {
+  min-height: 67vh;
+}
+
+// changing the heigh large screen
+.cp-masthead--fluid {
+  min-height: 100vh;
+}
+
+.cp-masthead__text--align-center {
+  margin: auto;
+  text-align: center;
+}
+
+.cp-masthead__text--at-center {
+  margin: auto;
+}
+
+.cp-masthead__text--at-left-center {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.cp-masthead__text--at-bottom {
+  margin-top: auto;
+}
+
+// MQs
+@include respond(mobile) {
+  .cp-masthead__list {
+    grid-template-columns: repeat(auto-fit, minmax(23rem, 1fr));
+  }
+}   // 360px
+
+@include respond(tablet-l) {
+  .cp-masthead__text {
+    min-height: 600px;
+    padding-top: var(--size-64);
+    padding-bottom: var(--size-64);
+  }
+
+  .cp-masthead__title {
+    font-size: var(--fs-lead-heading-small);
+    line-height: var(--lh-heading-2);
+  }
+
+  // Modifiers
+  .cp-masthead--fluid {
+    min-height: 90vh;
+  }
+}   // 1240px
