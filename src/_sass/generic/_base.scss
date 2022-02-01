@@ -6,11 +6,11 @@ html {
 
 body {
   background-color: var(--canvas);
-  color: var(--canvas-text);
+  color: var(--text-on-canvas);
   font-family: var(--typeface-primary);
-  font-size: var(--font-size-body);
+  font-size: var(--fs-body);
   font-weight: 400;
-  line-height: var(--base-line-height-mobile);
+  line-height: var(--lh-base-mobile);
   overflow-y: auto;
   scroll-behavior: smooth;
 }
@@ -25,7 +25,7 @@ hr,
 table,
 figure,
 pre {
-  margin-top: var(--size-28);
+  margin-block-start: var(--size-28);
 }
 
 img,
@@ -59,7 +59,7 @@ strong {
 }
 
 small {
-  font-size: var(--font-size-caption);
+  font-size: var(--fs-caption);
 }
 
 sub,
@@ -89,7 +89,7 @@ template {
 // MQs
 @include respond(tablet-l) {
   body {
-    font-size: var(--font-size-body-large);
-    line-height: var(--base-line-height-laptop);
+    font-size: var(--fs-body-large);
+    line-height: var(--lh-base-laptop);
   }
 } // 900px

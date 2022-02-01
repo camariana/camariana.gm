@@ -1,20 +1,20 @@
 html {
-  scrollbar-color: var(--brand-enabled) var(--border-color-subdued);
+  scrollbar-color: var(--primary-enabled) var(--border-color);
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 16px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--border-color-subdued);
+  background: var(--border-color);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--brand-enabled);
+  background: var(--primary-enabled);
 }
 
 /* Handle on hover */
