@@ -1,0 +1,36 @@
+<div class="cp-fullscreen-navigation ob-off-canvas-nav is-open" role="navigation" aria-label="Fullscreen Navigation">
+  <div class="ob-off-canvas-nav__contain">
+
+    <div class="ob-off-canvas-nav__header">
+      {% include logo.html %}
+      {% include utilities/toggle-nav-icon-close.html %}
+    </div>
+
+    <div class="ob-off-canvas-nav__main">
+      <nav class="cp-fullscreen-nav">
+          <ul class="cp-fullscreen-nav__list">
+              {% for item in site.data.navigation.primary %}
+                <li>
+                  <a href="{{ item.url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
+                </li>
+              {% endfor %}
+          </ul>
+
+          <ul class="cp-fullscreen-nav__list cp-fullscreen-nav__list--alt">
+            {% for item in site.data.navigation.secondary %}
+              <li>
+                <a href="{{ item.url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+      </nav>
+    </div>
+
+    <div class="ob-off-canvas-nav__footer">
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed assumenda provident voluptatibus ex quaerat, consequatur blanditiis, neque error perspiciatis nam aliquam temporibus dolores, porro vitae? Tempora facere magni quibusdam ipsum.
+      </p>
+    </div>
+
+  </div>
+</div>
