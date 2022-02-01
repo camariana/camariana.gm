@@ -37,7 +37,7 @@
 }
 
 // States
-.cp-fullscreen-navigation.is-open {
+.is-open {
   z-index: var(--layer-surface);
   display: block;
   opacity: 1;
