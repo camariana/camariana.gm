@@ -1,0 +1,19 @@
+blockquote {
+  max-width: var(--container-width-medium);
+  padding: var(--size-8) var(--size-24);
+  border-left: 8px solid var(--border-color-subdued);
+  font-family: var(--typeface-quotes);
+  font-size: var(--font-size-subtitle-large);
+
+  > p {
+    margin-top: 0;
+  }
+
+  > * + * {
+    margin-top: var(--size-28);
+  }
+}
+
+q {
+  font-style: italic;
+}
