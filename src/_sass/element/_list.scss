@@ -1,0 +1,18 @@
+ul,
+ol {
+  padding-left: var(--size-16);
+  margin-left: var(--size-24);
+}
+
+ul ul,
+ol ol {
+  margin-top: 0;
+}
+
+dt {
+  font-weight: bold;
+}
+
+::marker {
+  color: var(--interactive-enabled);
+}

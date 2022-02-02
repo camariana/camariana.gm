@@ -1,0 +1,14 @@
+figure {
+  small {
+    display: block;
+    color: var(--canvas-text-subdued);
+    font-size: var(--font-size-overline);
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+
+figcaption {
+  font-family: var(--typeface-quotes);
+  font-style: italic;
+}
