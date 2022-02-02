@@ -5,15 +5,17 @@
     <link rel="stylesheet" href="{{ "/assets/css/index.css" | relative_url }}">
   </head>
   <body>
-    <header class="header">
-      {% include header.html %}
-    </header>
-    
-    {{ content }}
-    
-    <footer>
-      {% include footer.html %}
-    </footer>
+    <div class="ob-page">
+      <header class="header">
+        {% include header.html %}
+      </header>
+
+      {{ content }}
+
+      <footer>
+        {% include footer.html %}
+      </footer>
+    </div>
 
     {% include fullscreen-nav.html %}
     

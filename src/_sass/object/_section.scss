@@ -1,0 +1,33 @@
+.ob-section {
+  padding-block-end: var(--size-48);
+  padding-block-start: var(--size-48);
+}
+
+// Elements
+.ob-section__header {
+  display: flex;
+  flex-direction: column;
+}
+
+// Modifiers
+.ob-section--hl-subdued {
+  background-color: var(--canvas-subdued);
+}
+
+.ob-section--with-no-pad {
+  padding: 0;
+}
+
+.ob-section__header--at-center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+// * MQs
+@include respond(laptop) {
+  .ob-section {
+    padding-block-end: calc(2 * var(--size-48));
+    padding-block-start: calc(2 * var(--size-48));
+  }
+}   // 1240px

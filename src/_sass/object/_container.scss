@@ -1,0 +1,28 @@
+.ob-contain {
+  @include default-contain;
+
+  padding: 0 var(--size-16);
+
+  .ob-contain {
+    padding: 0;
+  }
+}
+
+// Modifiers
+.ob-contain--center {
+  margin-inline: auto;
+}
+
+.ob-contain--prose {
+  display: flow-root;
+  max-width: var(--contain-target-width-prose);
+}
+
+.ob-contain--prose-large {
+  max-width: var(--contain-target-width-large);
+}
+
+.ob-contain--with-v-pad {
+  padding-block-end: var(--size-64);
+  padding-block-start: var(--size-64);
+}
