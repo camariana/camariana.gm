@@ -7,24 +7,25 @@
   --text-on-canvas-subdued: var(--neutral-700);
   --canvas-code: var(--neutral-200);
   --canvas-code-text: var(--neutral-1000);
-  --canvas-disabled: var(--neutral-75);
+  --canvas-disabled: var(--neutral-500);
   --canvas-disabled-text: var(--neutral-700);
-  --border-color: var(--neutral-100);
-  --border-color-subdued: var(--neutral-75);
+  --border-color-subdued-dark: var(--neutral-500);
+  --border-color: var(--neutral-400);
+  --border-color-subdued-light: var(--neutral-300);
   --icon-color: var(--neutral-700);
   --icon-color-hovered: var(--neutral-800);
 
   // Brand
-  --primary-enabled: var(--siroo-600);
-  --text-on-primary-enabled: var(--white);
-  --brand-hovered: var(--brand-dark);
-  --brand-hovered-subdued: var(--brand-lightest);
-  --brand-focused: var(--brand);
-  --brand-focused-subdued: var(--brand-lighter);
-  --brand-pressed: var(--brand);
+  --primary-enabled: var(--siroo-500);
+  --text-on-primary-enabled: var(--neutral-900);
+  --primary-hovered: var(--siroo-600);
+  --primary-hovered-subdued: var(--brand-lightest);
+  --primary-focused: var(--brand);
+  --primary-focused-subdued: var(--brand-lighter);
+  --primary-pressed: var(--brand);
 
   // Interactive-Theme -> focus indicators and selected interactive states
-  --interactive-enabled: var(--interactive-darker);
+  --interactive-enabled: var(--interactive);
   --interactive-text: var(--white);
   --interactive-background-selected: var(--interactive-lightest);
   --interactive-hovered: var(--interactive-dark);
