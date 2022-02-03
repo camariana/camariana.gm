@@ -1,0 +1,30 @@
+<ul class="pt-alternate-cards">
+{% for case in site.case-studies limit:3 %}
+  {% assign url = case.url | downcase %}
+  <li class="pt-alternate-card">
+    <div class="pt-alternate-card__text-wrapper">
+        <div class="pt-alternate-card__text">
+            <h3 class="pt-alternate-card__title">
+                <a href="{{ url }}" aria-describedby="{{ case.title }}">
+                 {{ case.title }}
+                </a>
+            </h3>
+            <span class="pt-alternate-card__tag">
+              PASSO
+            </span>
+            <p>
+              {{ case.description }}
+            </p>
+            <span class="button button--secondary pt-alternate-card__button" aria-hidden="true" id="{{ case.title }}">
+              Read the case study
+            </span>
+        </div>
+    </div>
+    <div class="pt-alternate-card__figure">
+      <img class="pt-alternate-card__img" src="{{ case.image }}" alt="{{ case.image_description }}" loading="lazy"/>
+    </div>
+  </li>
+{% endfor %}
+</ul>
+
+
