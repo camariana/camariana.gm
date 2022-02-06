@@ -46,7 +46,7 @@
 
 .cp-button--secondary {
   border: 2px solid var(--primary-enabled);
-  color: var(--primary-enabled);
+  color: var(--text-on-primary-enabled);
 
   &:hover {
     background-color: var(--primary-hovered-subdued);
@@ -58,14 +58,14 @@
 }
 
 .cp-button--text {
-  color: var(--primary-enabled);
+  color: var(--interactive-enabled);
 
   &:hover {
-    background-color: var(--primary-hovered-subdued);
+    background-color: var(--interactive-hovered);
   }
 
   &:focus {
-    background-color: var(--primary-focused-subdued);
+    background-color: var(--interactive-focused);
   }
 }
 
