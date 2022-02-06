@@ -1,5 +1,5 @@
 # Site settings
-title: 
+title: A Camariana
 description: ""
 keywords:
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -7,7 +7,7 @@ url:
 type: website
 image: 
 author: A Camariana
-permalink: pretty
+permalink: /:categories/:title/
 
 # Global Configuration
 source: src
@@ -21,7 +21,15 @@ sass:
 # Collections Settings
 collections_dir: na_collectionul
 collections:
-  elements:
-    output: false
+  til:
+    output: true
+  case-studies:
+    output: true
+  projects:
+    output: true
+  fullstackopen:
+    output: true  
+  cssguidelines:
+    output: true
 
 # Contact & Social Details
