@@ -81,6 +81,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--size-48);
+  color: var(--text-on-canvas-subdued);
 
   dt {
     font-weight: normal;
