@@ -2,7 +2,7 @@
   display: block;
   max-width: 6.15rem;
   padding: var(--size-4);
-  border: 2px solid var(--primary-enabled);
+  border: 2px solid var(--interactive-enabled);
   border-radius: var(--bd-radius-nano);
   color: inherit;
   line-height: var(--lh-one);
@@ -74,25 +74,3 @@
     transition-duration: 0.4s;
   }
 }
-
-// MQs
-@include respond(tablet) {
-  .cp-logo {
-    max-width: 9.15rem;
-    border: 4px solid var(--primary-enabled);
-    font-size: var(--fs-subtitle-small);
-
-    &:hover {
-      .cp-logo__item {
-        &:nth-of-type(1) {
-          transform: translate3d(7.15rem, 2rem, 0) rotate(0deg);
-        }
-      }
-    }
-  }
-
-  .cp-logo__contain {
-    grid-auto-rows: 2rem;
-    grid-template-columns: repeat(9, 1.5rem);
-  }
-}   // 600px
