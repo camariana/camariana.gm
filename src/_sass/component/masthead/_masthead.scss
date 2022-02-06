@@ -36,6 +36,7 @@
   font-size: var(--fs-subtitle);
   font-weight: 200;
   margin-block-start: var(--size-4);
+  line-height: inherit;
 }
 
 .cp-masthead__tag {
@@ -93,11 +94,6 @@
 }
 
 .cp-masthead__list {
-  @include reset-list;
-
-  display: grid;
-  gap: var(--size-24);
-
   li {
     padding: var(--size-16);
 
@@ -153,11 +149,6 @@
 }
 
 // MQs
-@include respond(mobile) {
-  .cp-masthead__list {
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  }
-}   // 360px
 
 @include respond(tablet-l) {
   .cp-masthead__contain {
