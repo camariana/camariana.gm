@@ -5,4 +5,13 @@
 .cp-header__contain {
   @include default-contain;
   @include dp-flex-apart-center;
+
+  max-width: var(--contain-target-width-large);
 }
+
+// MQs
+@include respond(laptop) {
+  .cp-header {
+    padding-block-start: var(--size-32);
+  }
+}   // 1240px
