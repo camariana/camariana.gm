@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<main>
+  <article class="cp-article">
+    <header class="cp-article__header">
+      <h1 class="cp-article__title">
+        {{ page.title }}
+      </h1>
+
+      <p class="cp-article__subtitle">
+        {{ page. description }}
+      </p>
+
+      <ul class="cp-article__categories">
+        {% include utilities/categories-link.html %}
+      </ul>
+
+      <ul class="cp-article__meta">
+        <li>
+          <span>
+            Published:
+          </span>
+          <time class="js-posted-on" datetime="{{ page.date | date_to_xmlschema }}">
+            <span class="js-posted-ago"></span> on 
+            {{ page.date | date: "%d %b, %y" }}
+          </time>
+        </li>
+        <li>
+          <span>
+            <abbr title="Estimated Reading Time">ERT</abbr>
+          </span>
+          <time datetime="">
+            {{ page.ert }}
+          </time>
+        </li>
+      </ul>
+
+      <figure class="ob-artwork ob-artwork--at-center" role="banner">
+        <picture>
+          <source srcset="{{ page.image_sm }}" media="(max-width: 1024px)">
+          <source srcset="{{ page.image }}" media="(min-width: 1025px)">
+          <img class="cp-article__img" src="{{ page.image_sm }}" alt="{{ page.image_description }}"/>
+        </picture>
+        <figcaption>
+          {{ page.image_caption }}
+        </figcaption>
+      </figure>
+    </header>
+
+
+    <section class="cp-article__content">
+      {{ content }}
+    </section>
+
+
+    <footer class="cp-article__">
+
+    </footer>
+  </article>
+</main>
+

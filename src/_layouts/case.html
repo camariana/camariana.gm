@@ -1,0 +1,80 @@
+---
+layout: default
+---
+<main>
+  <article class="pt-case">
+    <header class="pt-case__header">
+      <h1 class="pt-case__title">
+        {{ page.title }}
+      </h1>
+
+      <ul class="pt-case__categories">
+        {% include utilities/categories-link.html %}
+      </ul>
+
+      <ul class="pt-case__meta">
+        <li>
+          <span>
+            Published:
+          </span>
+          <time class="js-posted-on" datetime="{{ page.date | date_to_xmlschema }}">
+            <span class="js-posted-ago"></span> on 
+            {{ page.date | date: "%d %b, %y" }}
+          </time>
+        </li>
+      </ul>
+
+      <dl class="ob-definition-list ob-definition-list--grid">
+        <div>
+          <dt>
+            Client
+          </dt>
+          <dd>
+            {{ page.client }}
+          </dd>
+        </div>
+        <div>
+          <dt>
+            Sector
+          </dt>
+          <dd>
+            {{ page.sector }} 
+          </dd>
+        </div>
+        <div>
+          <dt>
+            What I did
+          </dt>
+          {% include utilities/case-work.html %}          
+        </div>
+        <div>
+          <dt>
+            Duration 
+          </dt>
+          <dd>
+            {{ page.duration }}
+          </dd>
+        </div>
+        <div>
+          <dt>
+            Tools
+          </dt>
+          <dd>
+            {{ page.tools }}
+          </dd>
+        </div>
+      </dl>
+    </header>
+
+
+    <section class="pt-case__content">
+      {{ content }}
+    </section>
+
+
+    <footer class="pt-case__footer">
+      up next till and similar till should come here
+    </footer>
+  </article>
+</main>
+

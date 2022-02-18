@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<main>
+  <article class="cp-article">
+    <header class="cp-article__header">
+      <h1 class="cp-article__title ut-no-mag">
+        {{ page.title }}
+      </h1>
+      <ul class="cp-article__categories">
+        {% include utilities/categories-link.html %}
+      </ul>
+
+      <ul class="cp-article__meta">
+        <li>
+          <span>
+            Published:
+          </span>
+          <time class="js-posted-on" datetime="{{ page.date | date_to_xmlschema }}">
+            <span class="js-posted-ago"></span> on 
+            {{ page.date | date: "%d %b, %y" }}
+          </time>
+        </li>
+      </ul>
+    </header>
+
+
+    <section class="cp-article__content">
+      {{ content }}
+    </section>
+
+
+    <footer class="cp-article__">
+      up next till and similar till should come here
+    </footer>
+  </article>
+</main>
+
