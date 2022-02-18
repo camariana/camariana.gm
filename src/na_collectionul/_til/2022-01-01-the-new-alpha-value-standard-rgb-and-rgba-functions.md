@@ -3,7 +3,7 @@ layout: til
 title: The new alpha value standard rgb() and rgba() functions
 
 categories: CSS
-date: 2021-01-01T10:20:00Z
+date: 2022-01-01T10:20:00Z
 ---
 
 The new syntax is to use three values without commas followed by a slash and the alpha channel of the color as a percentage.

@@ -8,10 +8,12 @@ date: 2021-05-14T10:20:00Z
 ert: 5
 
 image: /assets/images/post/test.jpg
+image_sm: /assets/images/post/test.jpg
 image_description:
+image_caption: some caption of the image
 ---
 
- I ran into this problem at work, when I was trying to solve a conditional rendering issue we were having with our posting data.
+I ran into this problem at work, when I was trying to solve a conditional rendering issue we were having with our posting data.
 
 ## A bit of context
 

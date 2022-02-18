@@ -4,11 +4,13 @@ title:  "Liquid empty string is not a falsy value"
 description: "Learn how not to think that false will work as you intended in liquid"
 
 categories: [Liquid, Jekyll]
-date: 2022-01-01T10:20:00Z
+date: 2022-01-29T15:00:00Z
 ert: 5
 
 image: /assets/images/post/test.jpg
+image_sm: /assets/images/post/test.jpg
 image_description:
+image_caption: some caption of the image
 ---
 
  I ran into this problem at work, when I was trying to solve a conditional rendering issue we were having with our posting data.
