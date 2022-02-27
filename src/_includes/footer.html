@@ -1,0 +1,40 @@
+<footer class="cp-footer">
+  <div class="cp-footer__contain ob-grid with-gap-48">
+    <div>
+      {% include logo.html %}
+      <p>
+        Design Engineer and Educator
+      </p>
+
+      <hr>
+
+      <p>
+        Camariana Ltd is a company registered in The Gambia. <br>
+        Company #. {{ site.companyNumber }}, 
+        VAT #. {{ site.vatNumber }}
+      </p>
+    </div>
+    <div class="cp-footer__apart">
+      <ul class="cp-footer-nav">
+        {% for item in site.data.navigation.misc %}
+          <li>
+            <a href="{{ item.url }}" class="cp-footer-nav__link">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <ul class="cp-footer-nav">
+        {% for item in site.data.navigation.tertiary %}
+          <li>
+            <a href="{{ item.url }}" class="cp-footer-nav__link">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div>
+      <p>
+        Subscribe to the newsletter to stay up to date with
+        articles, TILs, courses and much more!
+      </p>
+    </div>
+  </div>
+</footer>
