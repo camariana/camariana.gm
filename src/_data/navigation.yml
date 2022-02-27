@@ -8,8 +8,11 @@ primary:
 - title: Projects
   url: /projects
 
-- title: Blog
-  url: /blog
+- title: Articles
+  url: /articles
+
+- title: About
+  url: /about
 
 - title: Contact
   url: /contact
@@ -29,3 +32,47 @@ secondary:
 
 - title: GitHub
   url: https://github.com/camariana
+
+
+tertiary:
+- title: Library
+  url: /library
+
+- title: Colophon
+  url: /colophon
+
+- title: Meaning
+  url: /meaning
+
+- title: Privacy
+  url: /meaning#privacy
+
+- title: Terms
+  url: /meaning#terms
+
+- title: GitHub
+  url: https://github.com/camariana
+
+
+
+misc:
+- title: Home
+  url: /
+
+- title: Products
+  url: /products
+
+- title: TIL
+  url: /til
+
+- title: Workshops
+  url: /workshops
+
+- title: Speaking
+  url: /speaking
+
+- title: CV
+  url: /cv
+
+- title: Certificates
+  url: /certificates
