@@ -2,9 +2,10 @@
 layout: article
 title: The Prayer of Need
 
-categories: DUA
-date: 2022-03-02T11:20:00Z
-ert: 5
+meta:
+  categories: DUA
+  date: 2022-03-02T11:20:00Z
+  ert: 5
 ---
 
 ## How to pray the prayer of need

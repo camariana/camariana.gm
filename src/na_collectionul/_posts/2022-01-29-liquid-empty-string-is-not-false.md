@@ -1,19 +1,25 @@
 ---
-layout: post
-title:  "Liquid empty string is not a falsy value"
+layout: article
+title:  "An empty string is not a falsy value in liquid"
 description: "Learn how not to think that false will work as you intended in liquid"
 
-categories: [Liquid, Jekyll]
-date: 2022-01-29T15:00:00Z
-ert: 5
+meta:
+  categories: [Liquid, Jekyll]
+  date: 2022-01-29T15:00:00Z
+  ert: 5
 
-image: /assets/images/post/test.jpg
-image_sm: /assets/images/post/test.jpg
-image_description:
-image_caption: some caption of the image
+card_image:
+  path: /assets/images/articles/2022-01-29/article.jpg
+  alternate:
+
+
+masthead:
+  path: /assets/images/articles/2022-01-29/name-masthead-sm.jpg
+  path_large: /assets/images/articles/2022-01-29/name-masthead.jpg
+  alternate:
+  caption:
 ---
-
- I ran into this problem at work, when I was trying to solve a conditional rendering issue we were having with our posting data.
+We ran into this problem at work, when I was trying to solve a conditional rendering issue we were having with our posting data.
 
 ## A bit of context
 
@@ -21,49 +27,97 @@ To put you into context, here is a little background of what we were doing with 
 
 At the [Gambia College] [School of Education], every term, thousands of students apply for Teaching Practice (TP) to different schools through out the country. The posting data is in CSV, which we automatically loop through and generate a unique posting memo for each student.
 
-Here is an example of the data
+And here is an example of the memo with fake data
 
-And here is an example of the memo
+<figure>
+	<img class="ut-figure-border" src="/assets/images/articles/2022-01-29/memo.png" alt="">
+	<figcaption>
+		Teaching practice memo
+	</figcaption>
+</figure>
 
 ##  The problem at hand
 
 So what's the issue?
 
-What we want is one memo to rule them all, but different students, in different programs and majors. The content of the memo is the same for all the students except few places, such as:
+What we want is one memo to rule them all.
 
-- The prose of the pen ultimate sentence in the first paragraph
+But the issues is, we have different students, in different programs and majors. The content of the memo is the same for all the students except few places, such as:
+
+- The school the student choose and the region
+- The name of the student and GC #
 - The name of the programme
 - The major of the student
-- The school the student choose and the region
+- The prose of the pen ultimate sentence in the first paragraph
 
-Most of the difference is in the first paragraph of the memo, here is three different versions of that paragraph, take note of the insertion marks:
+Most of the difference is in the first paragraph of the memo, here are three different versions of that paragraph, take note of the insertion marks:
 
 For Diploma in Education and other non advanced diploma programmes
 
-> I write with great pleasure to inform you that [**Adama  Sowe**], is a student of The Gambia College,  pursuing [**Diploma in Education Primary**]                                under the School of Education. S/he has chosen your school for **Teaching Practice (TP)**. The duration of this exercise shall be only one term, starting from 22nd January 2022 to end of April 2022.
+> I write with great pleasure to inform you that [**Jannatta Naim** (GC#:5010987)], is a student of The Gambia College, pursuing [**Diploma in Education Primary**] under the School of Education. S/he has chosen your school for Teaching Practice (TP). The duration of this exercise shall be only one term, starting from January to April 2022.
 
 For Advanced Diploma in Education Secondary students with one major
 
-> I write with great pleasure to inform you that [**Abba  Kujabi**], is a student of The Gambia College,  pursuing [**Adv Diploma in Education Secondary**]                                under the School of Education. As a specialist in [**FRENCH**], s/he has chosen your school for **Teaching Practice (TP)**. The duration of this exercise shall be only one term, starting from 22nd January 2022 to end of April 2022.            
+> I write with great pleasure to inform you that [**Jannatta Naim** (GC#:5010987)], is a student of The Gambia College, pursuing [**Adv Diploma in Education Secondary**] under the School of Education. As a specialist in [**ISLAMIC STUDIES**], s/he has chosen your school for Teaching Practice (TP). The duration of this exercise shall be only one term, starting from January to April 2022.           
 
 For Advanced Diploma in Education Secondary students with two majors
 
-> I write with great pleasure to inform you that [**Abdou Jobe**], is a student of The Gambia College,  pursuing [**Adv Diploma in Education Secondary**]                                under the School of Education. As a specialist in [**SCIENCE**] and [**SES**], s/he has chosen your school for **Teaching Practice (TP)**. The duration of this exercise shall be only one term, starting from 22nd January 2022 to end of April 2022. 
+> I write with great pleasure to inform you that **Jannatta Naim** (GC#:5010987), is a student of The Gambia College, pursuing **Adv Diploma in Education Secondary** under the School of Education. As a specialist in **MATHEMATICS** and **AGRICULTURAL SCIENCE**, s/he has chosen your school for Teaching Practice (TP). The duration of this exercise shall be only one term, starting from January to April 2022.
 
-[alert box the below para]
-Note a slight change in the starting of the sentence [S/he] in the first and the ones on the second and third one [s/he]. The `S` is capital in the first and is small in the second and third one.
+<div class="cp-alert cp-alert--info">
+  <span class="cp-alert__caption">Note</span>
+  <p>
+		For Diploma in Education and other non advanced diploma programmes, the "S" in the [S/he] starts with a capital.
+  </p>
+
+	<p>
+		For Advanced Diploma in Education Secondary students with one major, the "s" in the [s/he] doesn't start with a capital, because in that version, we need to indicate the student's specialization.
+	</p>
+
+	<p>
+		The Advanced Diploma in Education Secondary students with two majors is the same with the above paragraph, except the "and" clause within the two majors.
+	</p>
+</div>
+
+
 
 ## Conditional rendering to the rescue
 
-To separate the advanced diploma programmes and the non advanced diploma programmes is straight forward. One way to do it in liquid is like this
+To separate the advanced diploma programmes and the non advanced diploma programmes is straight forward. One way to do it in liquid is like this.
 
-```twig
-{% if page.programme contains 'Adv' %}
-	// Adv. Dip specific things here
+<div class="cp-code">
+  <button class="cp-button cp-button--fab  cp-code__button">
+    <svg 
+    xmlns="http://www.w3.org/2000/svg" 
+    width="16" 
+    height="16" 
+    class="ob-icon" 
+    viewBox="0 0 16 16"
+    aria-hidden="true"
+    >
+      <path d="M13 0H6a2 2 0 0 0-2 2 2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h7a2 2 0 0 0 2-2 2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 13V4a2 2 0 0 0-2-2H5a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1zM3 4a1 1 0 0 1 1-1h7a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4z"></path>
+    </svg>
+    <span class="cp-code__tooltip" role="tooltip">
+      Copy code
+    </span>
+  </button>
+
+{% highlight liquid %}
+{% raw %}{% if page.programme contains 'Adv' %}
+
+	// Advanced Diploma stuff here
+
+{% else %}
+
+	// Non Advanced Diploma stuff here
+
 {% endif %}
-```
+{% endraw %}
+{% endhighlight %}
 
-If this statement is false, meaning, if the `page.programme` doesn't contain the `Adv`, then th first paragraph should be like this
+</div>
+
+If false, meaning, if the `page.programme` — the programme name — doesn't contain the word `Adv`, then the first paragraph should be like this:
 
 > I write with great pleasure to inform you that [**Adama  Sowe**], is a student of The Gambia College,  pursuing [**Diploma in Education Primary**]                                under the School of Education. S/he has chosen your school for **Teaching Practice (TP)**. The duration of this exercise shall be only one term, starting from 22nd January 2022 to end of April 2022.
 
@@ -107,3 +161,4 @@ If you have all the schools email, memos could be automatically send to the scho
 If that is the case schools can accept student with the student moving an inch and the students will notification of the acceptance via email and a details instruction what to do, who to contact and so on.
 
 If there is a reject the student will be notified as well and go back and choose another school
+
