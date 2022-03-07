@@ -1,11 +1,7 @@
 code {
-  padding: 0.125rem 0.25rem;
-  border: 1px solid var(--border-color-subdued-light);
-  background-color: var(--neutral-25);
-  box-decoration-break: clone;
-  color: var(--canvas-code-text);
+  box-decoration-break: clone;  
   font-family: var(--typeface-code);
-  font-size: var(--font-size-caption);
+  font-size: inherit;
   hyphens: none;
   tab-size: 2;
   text-align: start;

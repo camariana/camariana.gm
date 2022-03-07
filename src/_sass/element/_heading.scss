@@ -5,12 +5,12 @@ h4,
 h5,
 h6 {
   font-family: var(--typeface-secondary);
-  -webkit-font-smoothing: antialiased;
   font-weight: 200;
-  margin-block-start: var(--size-44);
+  
+  color: var(--text-on-canvas);
 
-  & + * {
-    margin-top: var(--size-8);
+  &:not(:first-child) {
+    margin-block-start: var(--size-44);
   }
 }
 

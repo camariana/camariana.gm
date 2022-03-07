@@ -26,9 +26,6 @@
   height: var(--size-16);
 }
 
-// .cp-button__text {
-
-// }
 
 // Modifiers
 .cp-button--primary {
@@ -41,19 +38,24 @@
 
   &:focus {
     background-color: var(--primary-focused);
+    outline: none;
   }
 }
 
 .cp-button--secondary {
   border: 2px solid var(--primary-enabled);
-  color: var(--text-on-primary-enabled);
+  color: var(--text-on-secondary-enabled);
 
   &:hover {
-    background-color: var(--primary-hovered-subdued);
+    background-color: var(--primary-hovered);
+    border-color: var(--primary-hovered);
+    color: var(--text-on-primary-enabled);
   }
 
   &:focus {
-    background-color: var(--primary-focused-subdued);
+    background-color: var(--primary-focused);
+    border-color: var(--primary-focused);
+    outline: none;
   }
 }
 
@@ -90,7 +92,7 @@
   width: var(--size-48);
   flex: none;
   padding: 0;
-  border: 2px solid var(--border-color);
+  border: 2px solid var(--border-color-subdued-10);
 
   &:hover {
     // box-shadow:
@@ -102,11 +104,6 @@
       box-shadow 200ms linear,
       filter 400ms ease;
   }
-}
-
-.cp-button--destructive {
-  background-color: var(--error);
-  color: var(--primary-text);
 }
 
 .cp-button--with-icon {

@@ -5,7 +5,7 @@ hr {
   box-sizing: content-box;
   padding: 0;
   border: 0;
-  border-top: 1px solid var(--border-color-subdued);
-  margin-top: var(--size-44);
-  margin-bottom: var(--size-44);
+  border-top: 1px solid var(--border-color);
+  margin-block-start: var(--size-44);
+  margin-block-end: var(--size-44);
 }

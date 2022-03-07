@@ -1,7 +1,7 @@
 .cp-quote {
   position: relative;
   max-width: 45ch;
-  margin: var(--size-16) auto;
+  margin: var(--size-56) auto;
   font-size: var(--fs-subtitle);
 
   p {
@@ -28,6 +28,7 @@
   padding-left: var(--size-24);
   margin-top: var(--size-24);
   font-style: normal;
+  font-size: inherit;
 }
 
 .cp-quote__avatar {
@@ -51,7 +52,7 @@
 }
 
 .cp-quote__author-role {
-  color: var(--text-on-canvas-subdued);
+  color: var(--text-on-canvas-subdued-20);
 }
 
 // Modifiers
@@ -69,7 +70,7 @@
     z-index: var(--layer-backward);
     top: calc(var(--size-32) * -1);
     left: calc(var(--size-32) * -1);
-    color: var(--canvas-subdued);
+    color: var(--canvas-subdued-20);
     content: "\201C";
     font-family: var(--typeface-quotes);
     font-size: calc(var(--size-72) * 3);

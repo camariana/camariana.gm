@@ -1,10 +1,10 @@
 html {
-  scrollbar-color: var(--primary-enabled) var(--border-color);
+  scrollbar-color: var(--primary-hovered) var(--border-color);
 }
 
 /* width */
 ::-webkit-scrollbar {
-  width: 16px;
+  width: 8px;
 }
 
 /* Track */
@@ -14,10 +14,10 @@ html {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-enabled);
+  background: var(--primary-hovered);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--brand-hovered);
+  background: var(--primary-focused);
 }

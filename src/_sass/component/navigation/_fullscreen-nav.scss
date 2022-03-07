@@ -23,7 +23,7 @@
   display: block;
   padding: var(--size-12) var(--size-16);
   color: inherit;
-  font-size: var(--fs-subtitle);
+  font-size: var(--fs-subtitle-large);
   text-decoration: none;
 }
 
@@ -31,8 +31,7 @@
 .cp-fullscreen-nav__list--alt {
   .cp-fullscreen-nav__link {
     padding: var(--size-8) var(--size-16);
-    color: var(--canvas-text-subdued);
-    font-size: var(--fs-subtitle-small);
+    font-size: var(--fs-subtitle);
   }
 }
 

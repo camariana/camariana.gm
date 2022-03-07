@@ -1,5 +1,5 @@
 .cp-footer {
-  background-color: var(--canvas-subdued);
+  background-color: var(--canvas-subdued-10);
 }
 
 .cp-footer__contain {
@@ -10,14 +10,14 @@
 }
 
 .cp-footer__apart {
-  @include dp-flex-apart-center;
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--size-72)
 }
 
 
 .cp-footer-nav {
   @include reset-list;
-
 }
 
 .cp-footer-nav__link {
@@ -25,6 +25,6 @@
   text-decoration: none;
 
   &:hover {
-    color: var(--interactive-hovered);
+    color: var(--interactive-enabled);
   }
 }

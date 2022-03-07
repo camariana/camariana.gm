@@ -57,7 +57,7 @@
   &::before {
     display: block;
     width: 96px;
-    border-top: 1px solid var(--border-color-subdued);
+    border-top: 1px solid var(--border-color);
     content: "";
     padding-block-end: var(--size-16);
   }
@@ -114,7 +114,7 @@
 
 // Modifiers
 .cp-masthead--light-gray {
-  background-color: var(--canvas-subdued);
+  background-color: var(--canvas-subdued-10);
 }
 
 .cp-masthead--fullscreen {
@@ -149,7 +149,6 @@
 }
 
 // MQs
-
 @include respond(tablet-l) {
   .cp-masthead__contain {
     padding-block-end: calc(2 * var(--size-48));

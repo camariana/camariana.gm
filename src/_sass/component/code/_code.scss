@@ -1,7 +1,7 @@
 .cp-compare-code {
     --compare-highlight-color: inherit;
 
-    pre {
+    > pre {
         margin-block-start: var(--size-12);
     }
 }
@@ -16,8 +16,16 @@
 
 .cp-code {
     position: relative;
+    
     &:hover .cp-code__button{
         opacity: 1;
+    }
+
+    table,
+    td,
+    pre {
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -27,7 +35,7 @@
 // Elements
 .cp-compare-code__label {
     margin: 0;
-    font-size: var(--font-size-subtitle);
+    font-size: var(--fs-subtitle);
     color: var(--compare-highlight-color);
 }
 

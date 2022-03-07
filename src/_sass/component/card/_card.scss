@@ -1,6 +1,8 @@
 .cp-card {
   @include dp-flex-direction-column;
   @include pos-rel-overflow-hidden;
+  padding: var(--size-16);
+  border-radius: var(--bd-radius-largest);
 
   transition: box-shadow 0.35s ease-in;
 
@@ -25,7 +27,8 @@
 
   // focus within to match the hover style
   &:focus-within {
-    outline: 1px dotted var(--brand-focused);
+    box-shadow: var(--elevation-medium);
+    outline: 1px dotted var(--interactive-enabled);
 
     .cp-card__img {
       @include scale-out-on-hover-and-focus;
@@ -47,6 +50,7 @@
 // Elements
 .cp-card__text {
   @include dp-flex-direction-column;
+  
 
   flex-grow: 1;
 
@@ -81,7 +85,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--size-48);
-  color: var(--text-on-canvas-subdued);
+  color: var(--text-on-canvas-subdued-20);
 
   dt {
     font-weight: normal;
@@ -117,18 +121,37 @@
 }
 
 .cp-card--apart {
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .cp-card__media--landscape {
   max-height: 564px;
 }
 
+.cp-card__title--overline {
+  position: relative;
+  padding-block-start: var(--size-16);
+
+  &::before {
+    top: 0;
+    position: absolute;
+    content: "";
+    border: 2px solid var(--primary-enabled);
+    width: 100px;
+  }
+}
+
+.cp-card__tag--list {
+  @include reset-list;
+  display: flex;
+  align-items: center;
+}
+
 // Card Highlighters
 .cp-card--hl-neutral {
-  background-color: var(--canvas-subdued);
+  background-color: var(--canvas-subdued-10);
 }
 
 // MQs
@@ -136,10 +159,25 @@
   .cp-card--box {
     padding: var(--size-24);
   }
+
+  .cp-card--apart {
+    flex-direction: row;
+    gap: var(--size-48);
+
+    > * + * {
+      margin-block-start: 0;
+      flex-basis: 50%;
+    }
+  }
 }   // 600px
 
 @include respond(laptop) {
   .cp-card--box {
     padding: var(--size-32);
+  }
+
+  .cp-card--apart {
+    flex-direction: row;
+    gap: var(--size-72);
   }
 }   // 1240px

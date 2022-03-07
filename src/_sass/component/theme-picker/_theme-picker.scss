@@ -9,13 +9,13 @@
   width: var(--size-48);
   height: var(--size-24);
   align-items: center;
-  border: 1px solid var(--border-color-subdued-dark);
-  background-color: var(--canvas-subdued-dark);
+  border: 1px solid var(--border-color-subdued-10);
+  background-color: var(--canvas-subdued-10);
   border-radius: var(--bd-radius-largest);
   cursor: pointer;
 
   &:hover {
-    background-color: var(--canvas-subdued-dark);
+    background-color: var(--canvas-subdued-20);
   }
 }
 
@@ -31,18 +31,12 @@
   width: var(--size-32);
   height: var(--size-32);
   padding: var(--size-4);
-  border: 1px solid var(--border-color-subdued-dark);
+  border: 1px solid var(--border-color-subdued-10);
   background-color: var(--canvas);
   border-radius: var(--bd-radius-circle);
 }
 
-// .cp-theme-picker__icon--dark    {
-
-// }
-
-// .cp-theme-picker__icon--light   {
-
-// }
+ 
 
 .cp-theme-picker__icon--caret {
   position: static;
@@ -53,32 +47,75 @@
 
 .cp-theme-picker__menu {
   @include reset-list;
-
-  width: 144px;
+  position: absolute;
+  display: block;
+  width: 156px;
+  top: 100%;
+  right: 0;
+  border: 1px solid var(--border-color);
+  border-radius: var(--bd-radius-medium);
+  box-shadow: var(--elevation-medium);
+  overflow: hidden;
 }
 
-// .cp-theme-picker__menu-item {
-
-// }
+.cp-theme-picker__menu-item {
+  
+}
 
 .cp-theme-picker__menu-button {
-  display: block;
-  padding: var(--size-8) var(--size-12);
+  @include pos-rel-overflow-hidden;
+
+  padding: var(--size-12) var(--size-16);
   border: none;
   background-color: transparent;
   color: inherit;
   text-decoration: none;
+  cursor: pointer;
+  width: 100%;
+
+  &::before,
+  &::after {
+   @include fix-double-shape-before-and-after;
+    border-radius: var(--bd-radius-tiny);
+    left: var(--size-16);
+  }
+
+  &::before {
+    @include fix-double-shape-before(20px);
+  }
+
+  &::after {
+    @include fix-double-shape-after(12px);
+    left: calc(var(--size-16) + 4px);
+    opacity: 0;   
+  }
+
+  &:hover {
+    background-color: var(--interactive-hovered);
+    color: var(--neutral-900);
+  }
 }
 
 // Modifiers
 .cp-theme-picker__menu-item--divider {
-  border-top: 1px solid var(--border-color-subdued);
+  border-top: 1px solid var(--border-color);
 }
 
 // Attributes
 .cp-theme-picker__menu-button[aria-checked="true"] {
-  color: red;
+  color: var(--interactive-selected);
+
+  &::before,
+  &::after {
+    border-color: var(--interactive-selected);
+   }
+
+  &::after {
+    opacity: 1;
+    background-color: var(--interactive-selected);
+  }
 }
+
 
 [aria-haspopup="false"] {
   .cp-theme-picker__icon-light {

@@ -1,17 +1,18 @@
 .ob-section {
-  padding-block-end: var(--size-48);
   padding-block-start: var(--size-48);
+  padding-block-end: var(--size-48);
 }
 
 // Elements
 .ob-section__header {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
 }
 
 // Modifiers
 .ob-section--hl-subdued {
-  background-color: var(--canvas-subdued);
+  background-color: var(--canvas-subdued-10);
 }
 
 .ob-section--with-no-pad {
@@ -24,10 +25,17 @@
   text-align: center;
 }
 
+.ob-section__header--apart {
+  gap: var(--size-16);
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 // * MQs
 @include respond(laptop) {
   .ob-section {
-    padding-block-end: calc(2 * var(--size-48));
     padding-block-start: calc(2 * var(--size-48));
+    padding-block-end: calc(2 * var(--size-48));
   }
 }   // 1240px

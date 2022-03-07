@@ -1,6 +1,6 @@
 .cp-case-table {
   margin: 0;
-  background-color: var(--canvas-subdued);
+  background-color: var(--canvas-subdued-10);
 }
 
 .cp-case-table__head {
@@ -22,4 +22,5 @@
 
 .cp-case-table__highlight {
   background-color: var(--primary-enabled);
+  color: var(--neutral-900);
 }

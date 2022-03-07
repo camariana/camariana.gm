@@ -1,8 +1,6 @@
 .ob-contain {
-  @include default-contain;
-
+  max-width: var(--contain-target-width);
   padding: 0 var(--size-16);
-
   .ob-contain {
     padding: 0;
   }
@@ -11,15 +9,6 @@
 // Modifiers
 .ob-contain--center {
   margin-inline: auto;
-}
-
-.ob-contain--prose {
-  display: flow-root;
-  max-width: var(--contain-target-width-prose);
-}
-
-.ob-contain--prose-large {
-  max-width: var(--contain-target-width-large);
 }
 
 .ob-contain--with-v-pad {
