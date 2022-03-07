@@ -7,7 +7,7 @@ $bps: (
   tablet-l:   56.25rem, // 900px
   laptop:     77.5rem, // 1240px
   laptop-l:   90rem, // 1240px
-  desktop:    90rem, // 1440px 
+  desktop:    100rem, // 1600px 
   desktop-l:  120rem, // 1920px 
   4k:         160rem, // 2560px //TODO find a size/value for that value
 ) !default;
@@ -117,7 +117,27 @@ $bps: (
 
 // Container
 @mixin default-contain {
-  max-width: var(--container-width-largest);
+  max-width: var(--contain-target-width);
   padding: 0 var(--size-16);
   margin: 0 auto;
+}
+
+
+@mixin fix-double-shape-before-and-after {
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  content: "";
+  border: 2px solid var(--border-color);
+  display: block;
+}
+
+@mixin fix-double-shape-before($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin fix-double-shape-after($size) {
+  width: $size;
+  height: $size;
 }

@@ -14,21 +14,19 @@
 }
 
 
-
-
+// MQs
 @include respond(tablet-l) {
     .cp-articles {
-        columns: 396px;
-        column-gap: 96px;
-      }
+      columns: 396px;
+      column-gap: 96px;
+    }
 
-      .cp-articles__item {
-        &:not(:last-child) {
-          margin-block-end: 96px;
-        }
+    .cp-articles__item {
+      &:not(:last-child) {
+        margin-block-end: 96px;
       }
+    }
 } // 900px
-
 
 @include respond(desktop) {
     .cp-articles {

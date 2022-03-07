@@ -1,8 +1,10 @@
 .cp-alert {
   padding: var(--size-24);
-  background-color: var(--white);
+  background-color: var(--canvas-subdued-10);
   box-shadow: var(--elevation-medium);
-  border-left: 8px solid var(--border-color-subdued-light);
+  border-left: 8px solid var(--border-color);
+  border-top-right-radius: var(--bd-radius-largest);
+  border-bottom-right-radius: var(--bd-radius-largest);
 
   margin: var(--size-72) 0;
 }

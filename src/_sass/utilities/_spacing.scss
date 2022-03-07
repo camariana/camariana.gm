@@ -1,3 +1,7 @@
+.ut-no-mag {
+  margin: 0 !important;
+}
+
 .ut-gap-top-size-small {
   margin-block-start: var(--size-28) !important;
 }
@@ -12,4 +16,11 @@
 
 .ut-gap-bottom-size-large {
   margin-block-end: var(--size-64) !important;
+}
+
+// This will apply a uniform gap between containers/box in the parent o-contain.
+.ut-v-gaps {
+  > * + * {
+    margin-block-start: var(--size-44) !important;
+  }
 }

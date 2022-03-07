@@ -44,17 +44,18 @@
   @include reset-list;
   display: flex;
   align-items: center;
-  order: -1
+  order: -1;
+  color: var(--text-on-canvas-subdued-20);
 }
 
 .cp-article__categories-link {
   display: block;
-  color: var(--text-on-canvas-subdued);
+  color: inherit;
   text-decoration: none;
   text-transform: uppercase;
   font-size: var(--fs-body);
   &:hover {
-    color: var(--interactive-hovered);
+    color: var(--interactive-enabled);
   }
 }
 
@@ -79,14 +80,14 @@
   text-decoration: none;
 
   &:hover {
-    background-color: var(--interactive-hovered);
+    background-color: var(--interactive-enabled);
     color: var(--text-on-interactive);
   }
  }
 }
 
 .cp-article__context-title {
-  color: var(--primary-hovered);
+  color: var(--primary-focused);
   font-size: var(--fs-subtitle);
   text-transform: uppercase;
 }
