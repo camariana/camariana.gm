@@ -36,30 +36,39 @@
 @import "./object/container";
 @import "./object/section";
 @import "./object/grid";
+@import "./object/side";
+@import './object/artwork';
+@import './object/definition-list';
 
 // @import './object/media';
 // @import './object/avatar';
 // @import './object/meta';
-// @import './object/artwork';
 @import "./object/off-canvas-nav";
 @import "./object/icon";
 
-// @import './object/definition-list';
+
 // @import './object/popup';
 
 // Components
 @import "./component/header/header";
+@import "./component/footer/footer";
 @import "./component/logo/logo";
 @import "./component/toggle-nav-icon/toggle-nav-icon";
 @import "./component/navigation/primary-nav";
 @import "./component/navigation/fullscreen-nav";
 @import "./component/theme-picker/theme-picker";
 @import "./component/masthead/masthead";
+@import './component/banner/banner';
 @import "./component/button/button";
 @import "./component/client-list/client-list";
 @import "./component/quote/quote";
 @import "./component/card/card";
 @import "./component/articles/articles";
+@import "./component/articles/article";
+@import "./component/table/case-table";
+@import './component/gallery/gallery';
+@import './component/alert/alert';
+@import './component/code/code';
 
 // @import './component/navigation/mobile-nav-bar';
 
@@ -71,14 +80,14 @@
 // @import './component/toc/toc';
 // @import './component/banner/banner';
 
-// @import './component/alert/alert';
+
 // @import './component/form/form';
 // @import './component/cover/cover';
 
-// @import './component/gallery/gallery';
+
 // @import './component/pager/pager';
 
-// @import './component/code/code';
+
 
 // @import './component/accordion/accordion';
 // @import './component/tab/tab';
@@ -87,19 +96,17 @@
 // Patterns
 @import "./pattern/alternate-card-list";
 
-// @import './pattern/case-study';
-
 // Themes
 
 // Utilities
 @import "./utilities/hidden";
 @import "./utilities/display";
 @import "./utilities/spacing";
+@import './utilities/text';
+@import './utilities/table';
+@import './utilities/figure-border';
 
-// @import './utilities/text';
-
-// @import './utilities/figure-border';
 // @import './utilities/article-link';
 // @import './utilities/highlighters';
-// @import './utilities/table';
+
 // @import './utilities/sticky';
