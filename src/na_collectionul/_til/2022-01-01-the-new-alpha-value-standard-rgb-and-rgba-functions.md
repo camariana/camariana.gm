@@ -77,8 +77,12 @@ meta:
   
 </figure>
 
-Note: At the time of writing, in scss (sass), not css, the rgb() will throw a compilation error like this: `Function rgb is missing argument ...`
+<div class="cp-alert cp-alert--warning">
+  <span class="cp-alert__caption">Warning</span>
+  <p>
+		 At the time of writing, in scss (sass), not css, the rgb() will throw a compilation error like this:
+  </p>
 
-
-
-
+  <pre><code>Function rgb is missing argument ...</code></pre>
+ 
+</div>
