@@ -3,20 +3,27 @@
     <div>
       {% include logo.html %}
       <p>
-        Design Engineer and Educator
+        Upon you peace 👋, I'm A Camariana — an educator and design engineer.
       </p>
 
       <hr>
 
       <p>
-        Camariana Ltd is a company registered in The Gambia. <br>
+        Camariana Ltd is a company registered in The Gambia.<br>
         Company #. {{ site.companyNumber }}, 
         VAT #. {{ site.vatNumber }}
       </p>
     </div>
     <div class="cp-footer__apart">
       <ul class="cp-footer-nav">
-        {% for item in site.data.navigation.misc %}
+        {% for item in site.data.navigation.primary %}
+          <li>
+            <a href="{{ item.url }}" class="cp-footer-nav__link">{{ item.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+      <ul class="cp-footer-nav">
+        {% for item in site.data.navigation.secondary %}
           <li>
             <a href="{{ item.url }}" class="cp-footer-nav__link">{{ item.title }}</a>
           </li>
