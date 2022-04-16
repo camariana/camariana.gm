@@ -24,31 +24,33 @@ layout: default
             </p>
           {% endif %}
 
-          <ul class="cp-article__meta">
-            <li>
-              <span>
-                Published:
-              </span>
-              <time class="js-posted-on" datetime="{{ page.date | date_to_xmlschema }}">
-                <span class="js-posted-ago"></span> on 
-                {{ page.date | date: "%d %b, %y" }}
-              </time>
-            </li>
-            <li>
-              <span>
-                <abbr title="Estimated Reading Time">ERT</abbr>
-              </span>
-              <time datetime="">
-                {{ page.ert }}
-              </time>
-            </li>
-          </ul>
+          {% if page.meta %}
+            <ul class="cp-article__meta">
+              <li>
+                <span>
+                  Published:
+                </span>
+                <time class="js-posted-on" datetime="{{ page.meta.date | date_to_xmlschema }}">
+                  <span class="js-posted-ago"></span> on 
+                  {{ page.meta.date | date: "%d %b, %y" }}
+                </time>
+              </li>
+              <li>
+                <span>
+                  <abbr title="Estimated Reading Time">ERT</abbr>
+                </span>
+                <time datetime="">
+                  {{ page.meta.ert }}
+                </time>
+              </li>
+            </ul>
+          {% endif %}
 
         </div>
 
-        {% if page.meta %}
+        {% if page.case_meta %}
           <dl class="ob-definition-list ob-definition-list--grid">
-            {% for meta in page.meta %}
+            {% for meta in page.case_meta %}
               <div>
                 <dt>
                   {{ meta[0] }}
@@ -61,32 +63,47 @@ layout: default
           </dl>
         {% endif %}
 
-        {% if page.article_masthead_img %}
+        {% if page.project_meta %}
+          <dl class="ob-definition-list ob-definition-list--grid">
+            {% for meta in page.project_meta %}
+              <div>
+                <dt>
+                  {{ meta[0] }}
+                </dt>
+                <dd>
+                  {{ meta[1] }}
+                </dd>
+              </div>
+            {% endfor %}
+          </dl>
+        {% endif %}
+
+        {% if page.masthead %}
 
           <figure class="ob-artwork ob-artwork--at-center" role="banner">
             <picture>
-              <source srcset="{{ page.article_masthead_img_sm }}" media="(max-width: 1024px)">
-              <source srcset="{{ page.article_masthead_img }}" media="(min-width: 1025px)">
-              <img class="cp-article__img" src="{{ page.article_masthead_img_sm }}" alt="{{ page.article_masthead_img_description }}"/>
+              <source srcset="{{ page.masthead.path }}" media="(max-width: 1024px)">
+              <source srcset="{{ page.masthead.path_large }}" media="(min-width: 1025px)">
+              <img class="cp-article__img" src="{{ page.masthead.path }}" alt="{{ page.masthead.alternate }}"/>
             </picture>
             <figcaption>
-              {{ page.article_masthead_img_caption }}
+              {{ page.masthead.caption }}
             </figcaption>
           </figure>
 
         {% endif %}
       </div>
 
-      {% if page.case_masthead_img  %}
+      {% if page.case_masthead  %}
 
         <figure class="ob-artwork" role="banner">
           <picture>
-            <source srcset="{{ page.case_masthead_img_sm }}" media="(max-width: 1024px)">
-            <source srcset="{{ page.case_masthead_img }}" media="(min-width: 1025px)">
-            <img class="cp-article__img" src="{{ page.case_masthead_img_sm }}" alt="{{ page.case_masthead_img_description }}"/>
+            <source srcset="{{ page.case_masthead.path }}" media="(max-width: 1024px)">
+            <source srcset="{{ page.case_masthead.path_large }}" media="(min-width: 1025px)">
+            <img class="cp-article__img" src="{{ page.case_masthead.path }}" alt="{{ page.case_masthead.alternate }}"/>
           </picture>
           <figcaption>
-            {{ page.case_masthead_img_caption }}
+            {{ page.case_masthead.caption }}
           </figcaption>
         </figure>
 
