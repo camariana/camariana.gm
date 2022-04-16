@@ -1,13 +1,22 @@
 # Site settings
 title: A Camariana
 description: ""
+siteName: Camariana
 keywords:
-baseurl: "" # the subpath of your site, e.g. /blog
-url: 
-type: website
-image: 
 author: A Camariana
+type: website
+image: /assets/images/image.jpg
+url: https://camariana.gm
 permalink: /:categories/:title/
+
+# Kramdown and Rouge
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
 
 # Global Configuration
 source: src

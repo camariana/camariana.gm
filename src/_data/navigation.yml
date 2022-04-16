@@ -18,11 +18,17 @@ primary:
   url: /contact
 
 secondary:
+- title: TIL
+  url: /til
+
 - title: Speaking
   url: /speaking
 
-- title: TIL
-  url: /til
+- title: Workshops
+  url: /workshops
+
+- title: Products
+  url: /products
 
 - title: CV
   url: /cv
@@ -35,44 +41,17 @@ secondary:
 
 
 tertiary:
+- title: Meaning
+  url: /meaning
+
 - title: Library
   url: /library
 
 - title: Colophon
   url: /colophon
 
-- title: Meaning
-  url: /meaning
-
 - title: Privacy
   url: /meaning#privacy
 
 - title: Terms
   url: /meaning#terms
-
-- title: GitHub
-  url: https://github.com/camariana
-
-
-
-misc:
-- title: Home
-  url: /
-
-- title: Products
-  url: /products
-
-- title: TIL
-  url: /til
-
-- title: Workshops
-  url: /workshops
-
-- title: Speaking
-  url: /speaking
-
-- title: CV
-  url: /cv
-
-- title: Certificates
-  url: /certificates
