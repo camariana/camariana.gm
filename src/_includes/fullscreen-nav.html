@@ -10,27 +10,38 @@
       <nav class="cp-fullscreen-nav">
           <ul class="cp-fullscreen-nav__list">
               {% for item in site.data.navigation.primary %}
+                {% assign url = item.url | downcase %}
                 <li>
-                  <a href="{{ item.url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
+                  <a href="{{ url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
                 </li>
               {% endfor %}
           </ul>
-
           <ul class="cp-fullscreen-nav__list cp-fullscreen-nav__list--alt">
             {% for item in site.data.navigation.secondary %}
+              {% assign url = item.url | downcase %}
               <li>
-                <a href="{{ item.url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
+                <a href="{{ url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
               </li>
             {% endfor %}
-          </ul>
+        </ul>
+        <ul class="cp-fullscreen-nav__list cp-fullscreen-nav__list--alt">
+          {% for item in site.data.navigation.tertiary %}
+            {% assign url = item.url | downcase %}
+            <li>
+              <a href="{{ url }}" class="cp-fullscreen-nav__link">{{ item.title }}</a>
+            </li>
+          {% endfor %}
+      </ul>
       </nav>
     </div>
-
+    
+    
     <div class="ob-off-canvas-nav__footer">
       <p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed assumenda provident voluptatibus ex quaerat, consequatur blanditiis, neque error perspiciatis nam aliquam temporibus dolores, porro vitae? Tempora facere magni quibusdam ipsum.
       </p>
     </div>
+
 
   </div>
 </div>
