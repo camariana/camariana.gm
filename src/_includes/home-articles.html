@@ -11,9 +11,9 @@
                 </a>
             </h3>
     
-            <span class="cp-card__tag">
-              {{ article.tags }}
-            </span>
+            <ul class="cp-card__tag cp-card__tag--list">
+                {% include utilities/categories.html %}
+            </ul>          
     
             <p>
               {{ article.description }}
@@ -25,8 +25,8 @@
                   Published
               </dt>
               <dd>
-                  <time class="js-posted-on" datetime="{{ article.date | date_to_xmlschema }}">
-                      <span class="js-posted-ago"></span>
+                  <time datetime="{{ article.meta.date | date_to_xmlschema }}">
+                    {{ article.meta.date | date: "%d %b, %y" }}
                   </time>
               </dd>
               </div>
@@ -35,70 +35,16 @@
                   <abbr title="Estimated Reading Time">ERT</abbr>
               </dt>
               <dd>
-                  5 Mins Read
+                  {{ article.meta.ert }} mins read
               </dd>
               </div>
             </dl>
         </div>
     
         <div class="cp-card__media">
-          <img class="cp-card__img" src="{{ article.image }}" alt="{{ article.image_description }}" loading="lazy"/>
+          <img class="cp-card__img" src="{{ article.image.path }}" alt="{{ article.image.alternate }}" loading="lazy"/>
         </div>
       </div>
   </li>
 {% endfor %}
 </ul>
-
-
-
-
-<!-- 
-    TODO refactor and move to its own js file 
-    https://excessivelyadequate.com/posts/timeago.html
--->
-<script>
-  function ago(date) {
-      function render(n, unit) {
-          return n + " " + unit + ((n == 1) ? "" : "s") + " ago";
-      }
-
-      var seconds = Math.floor((new Date() - date) / 1000);
-
-      var interval = Math.floor(seconds / (60 * 60 * 24 * 365));
-      if (Math.floor(seconds / (60 * 60 * 24 * 30 * 365)) >= 1) {
-          return render(interval, "year");
-      }
-      interval = Math.floor(seconds / (60 * 60 * 24 * 30));
-      if (interval >= 1) {
-          return render(interval, "month");
-      }
-      interval = Math.floor(seconds / (60 * 60 * 24));
-      if (interval >= 1) {
-          return render(interval, "day");
-      }
-      interval = Math.floor(seconds / (60 * 60));
-      if (interval >= 1) {
-          return render(interval, "hour");
-      }
-      interval = Math.floor(seconds / 60);
-      if (interval >= 1) {
-          return render(interval, "minute");
-      }
-      interval = Math.floor(seconds);
-      return render(interval, "second");
-  }
-
-  
-  const postedDate = document.querySelectorAll(".js-posted-on")
-  const postedAgo = document.querySelectorAll(".js-posted-ago")
-  let date
-
-  postedDate.forEach(time => {
-      date = Date.parse(time.getAttribute('datetime'))
-  })
-
-  postedAgo.forEach(time => {
-      time.textContent = ago(date);
-  })
-
-</script>

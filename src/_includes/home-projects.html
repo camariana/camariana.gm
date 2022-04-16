@@ -1,40 +1,41 @@
 <ul class="ob-grid with-gap-48">
-{% for project in site.projects limit:3 %}
+  {% assign reversed = site.projects | reverse %}
+  {% for project in reversed limit:3 %}
   {% assign url = project.url | downcase %}
-  <li class="cp-card">
-    <div class="cp-card__media">
-      <img class="cp-card__img" src="{{ project.image }}" alt="{{ project.image_description }}" loading="lazy"/>
-    </div>
+    <li class="cp-card">
+      <div class="cp-card__media">
+        <img class="cp-card__img" src="{{ project.image.path }}" alt="{{ project.image.alternate }}" loading="lazy"/>
+      </div>
 
-    <div class="cp-card__text">
+      <div class="cp-card__text">
 
-        <h3 class="cp-card__title">
-            <a href="{{ url }}" class="cp-card__link" aria-describedby="{{ project.title }}">
-                {{ project.title }}
-            </a>
-        </h3>
+          <h3 class="cp-card__title">
+              <a href="{{ url }}" class="cp-card__link" aria-describedby="{{ project.title }}">
+                  {{ project.title }}
+              </a>
+          </h3>
 
-        <p>
-          {{ project.description }}
-        </p>
+          <p>
+            {{ project.description }}
+          </p>
+          
+          <span 
+              class="
+                  cp-button 
+                  cp-button--text
+                  cp-button--with-icon 
+                  cp-card__button"
+                  aria-hidden="true" id="{{ project.title }}"
+              >
+              <span>
+                  Learn more
+              </span>
+              <span>
+                  &rarr;
+              </span>          
+          </span>
         
-        <span 
-            class="
-                cp-button 
-                cp-button--text
-                cp-button--with-icon 
-                cp-card__button"
-                aria-hidden="true" id="{{ project.title }}"
-            >
-            <span>
-                Learn more
-            </span>
-            <span>
-                &rarr;
-            </span>          
-        </span>
-      
-    </div>
-  </li>
-{% endfor %}
+      </div>
+    </li>
+  {% endfor %}
 </ul>

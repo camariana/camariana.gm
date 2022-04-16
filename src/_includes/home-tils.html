@@ -1,0 +1,22 @@
+<ul class="ob-grid with-gap-48">
+  {% assign reversed = site.til | reverse %}
+  {% for til in reversed limit:3 %}
+    {% assign url = til.url | downcase %}
+    <li class="cp-card">
+      <div class="cp-card__text">
+          <h3 class="cp-card__title cp-card__title--overline">
+              <a href="{{ url }}" class="cp-card__link">
+                {{ til.title }}
+              </a>
+          </h3>
+          <time datetime="{{ article.meta.date | date_to_xmlschema }}">
+            {{ til.meta.date | date: "%d %b, %y" }}
+          </time>
+  
+          <p>
+            {{ til.description }}
+          </p>
+      </div>
+    </li>
+  {% endfor %}
+</ul>
