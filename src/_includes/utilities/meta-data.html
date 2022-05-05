@@ -1,9 +1,12 @@
-{% assign description = page.description | default: site.description | strip_html | strip_newlines %}
+{% assign title = page.title | default: site.title | strip_html | strip_newlines %}
+{% assign type = page.type | default: site.type | strip_html | strip_newlines %}
+{% assign image = page.image.path | default: site.image | prepend: site.baseurl | prepend: site.url  %}
 {% assign url = page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url %}
-{% assign image = page.image | default: site.image  %}
+
+{% assign description = page.description | default: site.description | strip_html | strip_newlines %}
+{% assign siteName = page.siteName | default: site.siteName | strip_html | strip_newlines %}
 
 <meta charset="utf-8">
-<meta content="ie=edge" http-equiv="X-UA-Compatible">
 
 <!-- Mobile meta data -->
 <meta name="HandheldFriendly" content="true">
@@ -18,11 +21,13 @@
 <meta name="author" content="{{ site.author }}">
 
 <!-- Open Graph Metadata -->
-<meta property="og:title" content="{{ title }}" />
-<meta property="og:type" content="{{ site.type }}" />
-<meta property="og:url" content="{{ url }}" />
-<meta property="og:description" content="{{ description }}" />
-<meta property="og:image" content="{{ image }}" />
+<meta property="og:title" content="{{ title }}">
+<meta property="og:type" content="{{ type }}" />
+<meta property="og:image" content="{{ image }}">
+<meta property="og:url" content="{{ url }}">
+
+<!--  Recommended -->
+<meta property="og:description" content="{{ description }}">
+<meta property="og:site_name" content="{{ siteName }}">
 
 <title>{{ page.title }} - {{ site.title }}</title>
-<meta name="theme-color" content="#f5f5f5">
