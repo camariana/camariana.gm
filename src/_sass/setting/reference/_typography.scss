@@ -1,0 +1,24 @@
+@mixin ref-typography {
+  // fonts
+  --ref-font-primary: metropolis, "Helvetica Neue", "Segoe UI", ubuntu, system-ui, -apple-system, sans-serif;
+  --ref-font-secondary: georgia, times, serif;
+  --ref-font-tertiary: "Fira Code", "Courier New", courier, monospace;
+
+  // Weight
+  --ref-weight-100: 100;
+  --ref-weight-200: 200;
+  --ref-weight-300: 300;
+  --ref-weight-400: 400;
+  --ref-weight-500: 500;
+  --ref-weight-600: 600;
+  --ref-weight-700: 700;
+  --ref-weight-800: 800;
+
+  // Leading
+  --ref-leading-1: 1;
+  --ref-leading-1-25: 1.25;
+  --ref-leading-1-5: 1.5;
+  --ref-leading-1-6: 1.6;
+  --ref-leading-1-7: 1.7;
+  --ref-leading-1-8: 1.8;
+}

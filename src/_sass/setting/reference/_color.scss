@@ -1,0 +1,88 @@
+@mixin ref-color {
+  // Material Design Grays
+  --ref-neutral-0: #000000;
+  --ref-neutral-5: #212121;
+  --ref-neutral-10:#424242;
+  --ref-neutral-20:#9e9e9e;
+  --ref-neutral-30:#616161;
+  --ref-neutral-40:#757575;
+  --ref-neutral-50:#bdbdbd;
+  --ref-neutral-60:#e0e0e0;
+  --ref-neutral-70:#eeeeee;
+  --ref-neutral-80:#f5f5f5;
+  --ref-neutral-90:#fafafa;
+  --ref-neutral-100:#ffffff;
+
+  // Primary 
+  --ref-primary-5: #fef8e3;
+  --ref-primary-10: #fcedb7;
+  --ref-primary-20: #fbe18a;
+  --ref-primary-30: #fad75d;
+  --ref-primary-40: #f9cd3e;
+  --ref-primary-50: #f9c430;
+  --ref-primary-60: #F8B82A; // p
+  --ref-primary-70: #f7a526;
+  --ref-primary-80: #f69522;
+  --ref-primary-90: #f4781d;
+
+  // Secondary 
+  --ref-secondary-5: #e2f2ff;
+  --ref-secondary-10: #badcff;
+  --ref-secondary-20: #8cc7ff;
+  --ref-secondary-30: #56b1ff;
+  --ref-secondary-40: #2a9fff;
+  --ref-secondary-50: #008eff;
+  --ref-secondary-60: #1d7fff;
+  --ref-secondary-70: #2a6bf8; // p
+  --ref-secondary-80: #3058e5;
+  --ref-secondary-90: #3633c5;
+
+  // Accents
+  --ref-red-: #b71c1c;
+  --ref-red-: #d32f2f;
+  --ref-red-: #f44336;
+  --ref-red-: #e57373;
+  --ref-red-: #ffcdd2;
+  --ref-red-: #ffebee;
+
+  --ref-green-: #1b5e20;
+  --ref-green-: #388e3c;
+  --ref-green-: #4caf50;
+  --ref-green-: #81c784;
+  --ref-green-: #c8e6c9;
+  --ref-green-: #e8f5e9;
+
+  --ref-blue-: #0d47a1;
+  --ref-blue-: #1976d2;
+  --ref-blue-: #2196f3;
+  --ref-blue-: #64b5f6;
+  --ref-blue-: #bbdefb;
+  --ref-blue-: #e3f2fd;
+
+  --ref-teal-: #004d40;
+  --ref-teal-: #00796b;
+  --ref-teal-: #009688;
+  --ref-teal-: #4db6ac;
+  --ref-teal-: #b2dfdb;
+  --ref-teal-: #e0f2f1;
+
+  --ref-orange-: #e65100;
+  --ref-orange-: #f57c00;
+  --ref-orange-: #ff9800;
+  --ref-orange-: #ffb74d;
+  --ref-orange-: #ffe0b2;
+  --ref-orange-: #fffde7;
+
+
+  // Light
+  --ref-light-scheme-base: var(--ref-neutral-100);
+  --ref-light-scheme-dark: var(--ref-neutral-80);
+  --ref-light-scheme-darker: var(--ref-neutral-70);
+  --ref-light-scheme-darkest: var(--ref-neutral-60);
+
+  // Dark
+  --ref-dark-scheme-base: #212332;
+  --ref-dark-scheme-light: #2a2d3e;
+  --ref-dark-scheme-lighter: #3e4156;
+  --ref-dark-scheme-lightest: #1c2033;
+}

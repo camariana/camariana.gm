@@ -1,0 +1,10 @@
+@mixin typography {
+  --base-text-font-family: var(--ref-font-primary);
+  --base-text-font-size: var(--ref-size-16);
+  --base-text-leading: var(--ref-leading-1-6);
+  --base-font-weight: var(--ref-weight-400);
+  
+  // Variants
+  --base-text-font-size-laptop: var(--ref-size-20);
+  --base-text-leading-laptop: var(--ref-leading-1-7);
+}
